@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contact | Xylo Green Garden – Get in Touch</title>
+    <!-- Google Fonts & Font Awesome for clean icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5fef2;
+            color: #1e3a2f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        /* Green Theme Variables */
+        :root {
+            --deep-forest: #0b3b2f;
+            --sage-green: #9bbf8f;
+            --moss: #4a7c59;
+            --light-mint: #e2f3e4;
+            --cream: #fef9e6;
+            --earth: #8b5a2b;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #d9e6cf;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (consistent with main site) */
+        header {
+            background: #ffffffdd;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 32, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #cde3cd;
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+        .logo h1 {
+            font-size: 1.9rem;
+            color: #1c5d3a;
+        }
+        .logo span {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: #5a8f4c;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e4620;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #2b7a4b;
+            border-bottom: 2px solid #6fbf4c;
+        }
+
+        /* Page hero (contact specific) */
+        .page-hero {
+            background: linear-gradient(105deg, #e1f3da 0%, #cbe5c0 100%);
+            padding: 50px 0 60px;
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 30px;
+        }
+        .page-hero h1 {
+            font-size: 3rem;
+            color: #144d2b;
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: #2a573a;
+        }
+
+        /* Contact grid */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin: 40px 0 70px;
+        }
+        .contact-info {
+            flex: 1.2;
+            background: white;
+            border-radius: 40px;
+            padding: 36px 32px;
+            box-shadow: 0 20px 35px rgba(50, 80, 30, 0.08);
+            transition: transform 0.2s;
+        }
+        .contact-form {
+            flex: 1.8;
+            background: white;
+            border-radius: 40px;
+            padding: 36px 32px;
+            box-shadow: 0 20px 35px rgba(50, 80, 30, 0.08);
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .info-icon {
+            background: #e6f4e2;
+            width: 56px;
+            height: 56px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: #2a7a48;
+        }
+        .info-text h3 {
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+            color: #1c5736;
+        }
+        .info-text p, .info-text a {
+            color: #3a5e47;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .info-text a:hover {
+            color: #2b7a4b;
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+        .social-links a {
+            background: #eef5ea;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #2a6b3c;
+            font-size: 1.4rem;
+            transition: 0.2s;
+        }
+        .social-links a:hover {
+            background: #2a6b3c;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 24px;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: #1f4d33;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cfe3cd;
+            border-radius: 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: #fefef7;
+            transition: 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4f9e4a;
+            box-shadow: 0 0 0 3px rgba(79, 158, 74, 0.2);
+        }
+        .btn-submit {
+            background: #2a6b3c;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-submit:hover {
+            background: #1c5431;
+            transform: scale(1.02);
+        }
+        .form-note {
+            font-size: 0.8rem;
+            margin-top: 16px;
+            color: #6f8f72;
+            text-align: center;
+        }
+
+        /* Map / extra section */
+        .map-section {
+            margin: 20px 0 60px;
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        .map-section iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+            display: block;
+        }
+        .green-badge {
+            background: #e2f0dd;
+            border-radius: 32px;
+            padding: 28px 32px;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* footer */
+        footer {
+            background: #0a2f24;
+            color: #e0f0da;
+            padding: 48px 0 28px;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            color: #c6e6b4;
+        }
+        .footer-contact i {
+            width: 32px;
+            color: #b7e09c;
+        }
+        .footer-contact p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2c5a44;
+            padding-top: 28px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .page-hero h1 {
+                font-size: 2.3rem;
+            }
+            .contact-grid {
+                flex-direction: column;
+            }
+            .header-flex {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .info-item {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>XYLO GREEN GARDEN</h1>
+            <span>🌿 where nature meets soul</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" style="color:#2b7a4b; border-bottom:2px solid #6fbf4c;">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- Page title & intro -->
+    <div class="page-hero">
+        <div class="container">
+            <h1>Let’s Cultivate Connections 🌱</h1>
+            <p>Have a question about organic gardening, workshops, or collaboration? Reach out to our green team — we’d love to hear from you. Whether you're a home gardener, landscape designer, or sustainability enthusiast, Xylo Green Garden is here to support your journey.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Contact grid: info + form -->
+        <div class="contact-grid">
+            <!-- Left side: Address, phone, email, social -->
+            <div class="contact-info">
+                <h2 style="font-size: 1.9rem; margin-bottom: 28px; color: #1c5d3a;">Rooted in Nature</h2>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text">
+                        <h3>Visit Our Garden Hub</h3>
+                        <p>1420 Evergreen Lane, Green Valley, CA 93940<br>United States</p>
+                        <p style="margin-top: 6px;"><i class="fas fa-clock" style="margin-right: 6px;"></i> Mon–Fri: 9am – 6pm | Sat: 10am – 4pm</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-text">
+                        <h3>Call or Text</h3>
+                        <p><a href="tel:+18884479356">+1 (888) 447-9356 (GREEN)</a><br>For urgent garden queries & support</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h3>Email Correspondence</h3>
+                        <p><a href="mailto:hello@xylogreengarden.com">hello@xylogreengarden.com</a><br>Response within 24h (weekdays)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-globe"></i></div>
+                    <div class="info-text">
+                        <h3>Digital Community</h3>
+                        <p>Join our newsletter & gardening webinars. Also find us on social media for daily inspiration.</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="green-badge" style="margin-top: 32px; background: #eef3e9; border-radius: 28px; padding: 18px;">
+                    <i class="fas fa-seedling" style="font-size: 2rem; color: #3d8f40;"></i>
+                    <p style="margin-top: 12px;"><strong>🌿 10+ years of regenerative gardening</strong><br>Workshops, consulting, and plant sales available.</p>
+                </div>
+            </div>
+
+            <!-- Right side: contact form -->
+            <div class="contact-form">
+                <h2 style="font-size: 1.9rem; margin-bottom: 12px;">Send us a message 🌻</h2>
+                <p style="margin-bottom: 28px; color: #476b4a;">We’d love to assist you with gardening advice, partnership opportunities, or any inquiry about our green content.</p>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full name *</label>
+                        <input type="text" id="name" name="name" placeholder="e.g., Elena Green" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (888) 447-9356">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>— Select a topic —</option>
+                            <option>General inquiry / Gardening tips</option>
+                            <option>Workshops & events</option>
+                            <option>Collaboration or media</option>
+                            <option>Volunteer / Community garden</option>
+                            <option>Technical support (website)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your gardening dreams or questions... We’re all ears (and leaves)!" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <div class="form-note">
+                        <i class="fas fa-leaf"></i> We respect your privacy. Your data is protected and never shared.
+                    </div>
+                </form>
+                <!-- success message area -->
+                <div id="formFeedback" style="margin-top: 20px; font-weight: 500; text-align: center;"></div>
+            </div>
+        </div>
+
+        <!-- Interactive Map (real location simulation) -->
+        <div class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.6040610939715!2d-122.03065568471132!3d37.33448287983989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5f7a4a3c9a1%3A0x4e4a6e2b2f9c8d5!2sEvergreen%20Ln%2C%20Green%20Valley%2C%20CA%2093940!5e0!3m2!1sen!2sus!4v1647898765432!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Xylo Green Garden location map">
+            </iframe>
+        </div>
+
+        <!-- Extra rich info: Hours & accessibility (word count value) -->
+        <div style="background: #ffffffd9; border-radius: 38px; padding: 32px; margin: 20px 0 50px; box-shadow: 0 8px 20px rgba(0,0,0,0.03);">
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+                <div>
+                    <i class="fas fa-tree" style="font-size: 2.2rem; color: #4c8b3c;"></i>
+                    <h3 style="margin: 12px 0 8px;">Garden Center Hours</h3>
+                    <p>🌱 Monday–Friday: 9:00 AM – 6:00 PM<br>🌿 Saturday: 10:00 AM – 4:00 PM<br>🍂 Sunday: Closed (family & nature day)</p>
+                </div>
+                <div>
+                    <i class="fas fa-chalkboard-user" style="font-size: 2.2rem; color: #4c8b3c;"></i>
+                    <h3 style="margin: 12px 0 8px;">Upcoming Events</h3>
+                    <p>🌸 Spring Permaculture Workshop – April 12<br>🍅 Heirloom Tomato grafting class – May 5<br>🌻 Native Plant Swap – June 20 (RSVP needed)</p>
+                </div>
+                <div>
+                    <i class="fas fa-hand-sparkles" style="font-size: 2.2rem; color: #4c8b3c;"></i>
+                    <h3 style="margin: 12px 0 8px;">Get Involved</h3>
+                    <p>Volunteer days every 3rd Saturday. Help us maintain our demonstration food forest and pollinator sanctuary. Sign up via contact form!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- additional text to match the overall content richness -->
+        <div class="green-badge" style="background: #eef1e6; margin-bottom: 40px;">
+            <p style="font-size: 1rem;"><strong>📬 Prefer traditional mail?</strong> Write to us at P.O. Box 742, Green Valley, CA 93940. For wholesale or bulk seed inquiries, please email wholesale@xylogreengarden.com. Our team strives to respond to every message within 1–2 business days. At Xylo Green Garden, we believe that every question nurtures a greener future.</p>
+        </div>
+    </div>
+</main>
+
+<!-- Footer with address and number (consistent) -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>🌳 Xylo Green Garden</h3>
+                <p style="max-width: 280px;">Cultivating ecological harmony through education and nature-based design. Your partner in regenerative gardening.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit & Connect</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 1420 Evergreen Lane, Green Valley, CA 93940, United States</p>
+                <p><i class="fas fa-phone-alt"></i> +1 (888) 447-9356 (GREEN)</p>
+                <p><i class="fas fa-envelope"></i> hello@xylogreengarden.com</p>
+                <p><i class="fab fa-instagram"></i> @xylogreengarden</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Xylo Green Garden — rooted in nature. All content, images, and green wisdom protected. Growing together since 2012.</p>
+            <p>📍 Address: 1420 Evergreen Lane, Green Valley, CA 93940 | 📞 +1 (888) 447-9356</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Simple form handling simulation (alert + feedback) -->
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Gather basic info for a friendly message
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subjectSelect = document.getElementById('subject');
+        const subject = subjectSelect.options[subjectSelect.selectedIndex]?.text || "inquiry";
+        
+        if(!name || !email) {
+            feedbackDiv.innerHTML = '<span style="color:#c95a2e;"><i class="fas fa-exclamation-circle"></i> Please fill in all required fields.</span>';
+            return;
+        }
+        // Simulate successful submission (frontend demo)
+        feedbackDiv.innerHTML = `<span style="color:#2a6b3c; background:#e0f0da; padding:12px 20px; border-radius:40px; display:inline-block;"><i class="fas fa-check-circle"></i> Thanks ${name}! Your message has been rooted in our inbox. We’ll reply within 24h. 🌿</span>`;
+        contactForm.reset();
+        // optional: clear feedback after 6 sec
+        setTimeout(() => {
+            feedbackDiv.innerHTML = '';
+        }, 7000);
+    });
+</script>
+</body>
+</html>

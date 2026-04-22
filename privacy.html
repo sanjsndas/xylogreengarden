@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Privacy Policy | Xylo Green Garden – Your Data, Our Promise</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5fef2;
+            color: #1e3a2f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        :root {
+            --deep-forest: #0b3b2f;
+            --sage-green: #9bbf8f;
+            --moss: #4a7c59;
+            --light-mint: #e2f3e4;
+            --cream: #fef9e6;
+            --earth: #8b5a2b;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #d9e6cf;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header (consistent with index) */
+        header {
+            background: #ffffffdd;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 32, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #cde3cd;
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+        .logo h1 {
+            font-size: 1.9rem;
+            color: #1c5d3a;
+        }
+        .logo span {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: #5a8f4c;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e4620;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #2b7a4b;
+            border-bottom: 2px solid #6fbf4c;
+        }
+        .nav-links li {
+            list-style: none;
+        }
+
+        /* policy hero */
+        .policy-hero {
+            background: linear-gradient(120deg, #e0f0da, #cde3cd);
+            padding: 60px 0 50px;
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .policy-hero h1 {
+            font-size: 3rem;
+            color: #144d2b;
+        }
+        .policy-hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 16px auto 0;
+            color: #2a5a3a;
+        }
+        .last-updated {
+            background: #eef3ea;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        /* content card */
+        .privacy-card {
+            background: white;
+            border-radius: 48px;
+            padding: 48px 40px;
+            margin: 40px 0 60px;
+            box-shadow: 0 20px 35px -12px rgba(0, 32, 0, 0.08);
+        }
+        .privacy-section {
+            margin-bottom: 44px;
+            border-bottom: 1px solid #ddecd5;
+            padding-bottom: 32px;
+        }
+        .privacy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .privacy-section h2 {
+            font-size: 1.9rem;
+            margin-bottom: 18px;
+            color: #1b4d2e;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .privacy-section h2 i {
+            color: #4a9e5c;
+            font-size: 1.8rem;
+        }
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            margin: 24px 0 12px 0;
+            color: #2c6e41;
+        }
+        .privacy-section p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #2b4637;
+        }
+        .privacy-section ul, .privacy-section ol {
+            margin: 16px 0 16px 28px;
+        }
+        .privacy-section li {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .highlight-box {
+            background: #f2f9ef;
+            border-left: 6px solid #5fad56;
+            padding: 24px 28px;
+            border-radius: 28px;
+            margin: 28px 0;
+        }
+        .grid-2col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 20px 0;
+        }
+        .grid-2col > div {
+            flex: 1;
+            background: #fefef7;
+            padding: 20px;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .btn {
+            display: inline-block;
+            background: #2a6b3c;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        footer {
+            background: #0a2f24;
+            color: #e0f0da;
+            padding: 48px 0 28px;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            color: #c6e6b4;
+        }
+        .footer-contact i {
+            width: 32px;
+            color: #b7e09c;
+        }
+        .footer-contact p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2c5a44;
+            padding-top: 28px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 780px) {
+            .policy-hero h1 {
+                font-size: 2.2rem;
+            }
+            .privacy-card {
+                padding: 28px 20px;
+            }
+            .header-flex {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .grid-2col {
+                flex-direction: column;
+            }
+        }
+        .badge-icon {
+            background: #e5f3df;
+            border-radius: 100px;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>XYLO GREEN GARDEN</h1>
+            <span>🌿 where nature meets soul</span>
+        </div>
+        <div class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="policy-hero">
+        <div class="container">
+            <h1>Privacy Policy 🌿</h1>
+            <p>Your trust grows with us — like a well-tended garden. We are committed to transparency, data minimalism, and honoring your privacy.</p>
+            <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: April 21, 2026</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="privacy-card">
+            <!-- 1. Introduction -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-seedling"></i> 1. Our Promise to You</h2>
+                <p>At Xylo Green Garden (“we,” “us,” or “our”), we cultivate more than plants — we nurture a relationship built on respect, honesty, and ecological integrity. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>xylogreengarden.com</strong> (the “Site”), interact with our educational content, sign up for newsletters, or participate in our community forums. We follow the principles of data minimization and never sell your personal information. Your data stays safe with us, just as seeds are kept in a trusted library.</p>
+                <p>This policy applies to all visitors, registered users, and anyone who engages with our digital ecosystem. By using our Site, you agree to the practices described in this document. If you disagree, please refrain from using our services.</p>
+            </div>
+
+            <!-- 2. Information we collect -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-leaf"></i> 2. What Information We Gather</h2>
+                <p>We collect information to improve your experience, send gardening inspiration, and analyze how our community grows. The types of data include:</p>
+                <div class="grid-2col">
+                    <div>
+                        <i class="fas fa-user-circle" style="font-size: 1.8rem; color: #3f8a4c;"></i>
+                        <h3 style="margin: 12px 0 8px;">Personal Data</h3>
+                        <p>When you subscribe to our newsletter, register for events, or contact us, you may provide your name, email address, location (country/region), and optional details like gardening interests. We never ask for sensitive information.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #3f8a4c;"></i>
+                        <h3 style="margin: 12px 0 8px;">Usage & Device Data</h3>
+                        <p>We automatically collect anonymized data such as IP address, browser type, pages visited, time spent, and referring URLs. This helps us understand what content flourishes and how to improve accessibility.</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <i class="fas fa-cookie-bite"></i> <strong>Cookies & similar technologies:</strong> We use minimal, privacy-friendly cookies (essential ones for functionality, and optional analytics cookies with your consent). You can manage preferences via our Cookie Policy. We never use tracking for advertising profiling.
+                </div>
+                <p><strong>Community Forums:</strong> If you participate in our public forums, any information you share (e.g., gardening tips, photos) becomes visible to other members. Please use discretion and never share sensitive personal data publicly.</p>
+            </div>
+
+            <!-- 3. How we use information -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-hand-sparkles"></i> 3. How We Use Your Data (Always With Care)</h2>
+                <p>We treat your information like a delicate sapling — only for necessary, ethical purposes:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color:#528a41; width: 22px;"></i> To send you educational resources, seasonal gardening guides, and event updates (only if you opted in).</li>
+                    <li><i class="fas fa-check-circle" style="color:#528a41;"></i> To improve our website’s content, structure, and user experience based on aggregated analytics.</li>
+                    <li><i class="fas fa-check-circle" style="color:#528a41;"></i> To respond to your inquiries, support requests, or feedback.</li>
+                    <li><i class="fas fa-check-circle" style="color:#528a41;"></i> To administer contests, seed giveaways, or surveys — with clear transparency.</li>
+                    <li><i class="fas fa-check-circle" style="color:#528a41;"></i> To protect the security of our Site, detect fraud, or comply with legal obligations.</li>
+                </ul>
+                <p><strong>No spam, no selling:</strong> We will never rent, sell, or trade your personal information to third parties for marketing purposes. Our mission is rooted in community, not commodification.</p>
+            </div>
+
+            <!-- 4. Legal basis for processing (GDPR & CCPA) -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-gavel"></i> 4. Legal Basis & Your Rights (GDPR / CCPA)</h2>
+                <p>Depending on your location, you may have specific privacy rights. Xylo Green Garden respects:</p>
+                <ul>
+                    <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                    <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete data.</li>
+                    <li><strong>Right to Erasure (“Right to be Forgotten”):</strong> Request deletion of your data, subject to legal or legitimate business needs.</li>
+                    <li><strong>Right to Restrict Processing:</strong> Limit how we use your data.</li>
+                    <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+                    <li><strong>Right to Object:</strong> Opt-out of certain processing (e.g., direct marketing).</li>
+                </ul>
+                <p>We process your data based on your consent (e.g., newsletter sign-up), legitimate interests (improving our Site, security), or performance of a contract (e.g., event registration). To exercise your rights, contact us at <strong>privacy@xylogreengarden.com</strong> — we’ll respond within 30 days.</p>
+            </div>
+
+            <!-- 5. Data sharing & third parties -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-share-alt"></i> 5. When We Share Information (Limited & Secure)</h2>
+                <p>We only share personal data with trusted third parties that help us operate the Site, under strict confidentiality agreements:</p>
+                <ul>
+                    <li><strong>Service providers:</strong> Email delivery platforms (e.g., Mailchimp), analytics (Plausible or privacy-respecting tools), and hosting infrastructure. All are GDPR-compliant and data processing agreements are in place.</li>
+                    <li><strong>Legal compliance:</strong> If required by law, court order, or to protect the rights, property, or safety of Xylo Green Garden, our users, or the public.</li>
+                    <li><strong>Business transfers:</strong> In the unlikely event of a merger or acquisition, you will be notified before any data transfer becomes subject to a different policy.</li>
+                </ul>
+                <p>We do not share, license, or sell your data to advertisers, data brokers, or unrelated organizations. Ever.</p>
+            </div>
+
+            <!-- 6. Data retention & security -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-shield-alt"></i> 6. How We Protect & Retain Your Data</h2>
+                <p>We implement industry-standard security measures — encryption (SSL/TLS), firewalls, regular security audits, and limited access controls. While no online transmission is 100% secure, we strive to protect your data with the same devotion we give to heirloom seeds.</p>
+                <p><strong>Retention:</strong> We retain personal data only as long as necessary to fulfill the purposes outlined in this policy, or as required by law. Newsletter subscriber data is kept until you unsubscribe. Forum content remains until you delete your account. Aggregated analytics data may be stored longer for historical insights, but never identifies individuals.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-tree"></i> <strong>Children’s privacy:</strong> Our Site is intended for general audiences over the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with data, please contact us and we will delete it promptly.
+                </div>
+            </div>
+
+            <!-- 7. International data transfers -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-globe-americas"></i> 7. International Reach, Local Respect</h2>
+                <p>Xylo Green Garden is based in the United States, but our community spans the globe. If you access our Site from outside the US, your information may be transferred to, stored, and processed in the US or other countries where our service providers operate. We ensure appropriate safeguards (such as Standard Contractual Clauses) are in place to protect your data in accordance with applicable privacy laws. By using our Site, you consent to this transfer.</p>
+            </div>
+
+            <!-- 8. Your choices & managing preferences -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-toggle-on"></i> 8. Your Control Panel: Unsubscribe & Manage Cookies</h2>
+                <p>You are always in the driver’s seat:</p>
+                <ul>
+                    <li><strong>Email communications:</strong> Every newsletter includes a one-click unsubscribe link. You can also email <strong>unsubscribe@xylogreengarden.com</strong> to opt out.</li>
+                    <li><strong>Cookie settings:</strong> Adjust your cookie preferences via our cookie banner or browser settings. Disabling certain cookies may affect functionality.</li>
+                    <li><strong>Account deletion:</strong> If you have a registered forum account, you can request deletion by contacting support.</li>
+                    <li><strong>Do Not Track signals:</strong> We honor Do Not Track (DNT) browser settings where applicable.</li>
+                </ul>
+                <p>We also provide an opt-out for non-essential analytics — you’ll find the link in our Cookie Policy. We believe in radical transparency: you’ll never see intrusive behavioral ads.</p>
+            </div>
+
+            <!-- 9. Updates to this Privacy Policy -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-sync-alt"></i> 9. Growing With the Times: Policy Updates</h2>
+                <p>As our garden evolves, we may revise this Privacy Policy to reflect changes in technology, regulations, or our practices. We will post any updates on this page with a revised “Last Updated” date. For material changes, we will notify you via email (if you have subscribed) or through a prominent notice on our Site. We encourage you to review this policy periodically — your continued use signifies acceptance of any amendments.</p>
+            </div>
+
+            <!-- 10. Contact our Data Protection Officer -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-envelope-open-text"></i> 10. Reach Out — We’re Listening</h2>
+                <p>If you have questions, concerns, or wish to exercise your privacy rights, please contact our Data Protection team:</p>
+                <p><i class="fas fa-envelope"></i> <strong>privacy@xylogreengarden.com</strong><br>
+                <i class="fas fa-map-pin"></i> Xylo Green Garden – Data Stewardship, 1420 Evergreen Lane, Green Valley, CA 93940, United States<br>
+                <i class="fas fa-phone-alt"></i> +1 (888) 447-9356 (ask for Privacy Office)</p>
+                <p>For EU residents, you also have the right to lodge a complaint with your local supervisory authority. We are committed to resolving any privacy disputes in a fair, timely manner.</p>
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <i class="fas fa-heart" style="color:#468a42;"></i> <strong>Our Ethos:</strong> Privacy is not just a legal requirement — it’s a form of ecological respect. Just as we protect biodiversity, we safeguard your digital autonomy. Thank you for being part of a greener, more transparent world.
+                </div>
+            </div>
+
+            <!-- extra note about cookie policy link -->
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="cookies.html" class="btn"><i class="fas fa-cookie"></i> View Our Cookie Policy</a>
+                <a href="terms.html" style="margin-left: 20px; text-decoration: none; color: #2a6b3c; font-weight: 500;"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>🌳 Xylo Green Garden</h3>
+                <p style="max-width: 280px;">Cultivating ecological harmony through education and nature-based design. Your partner in regenerative gardening.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit & Connect</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 1420 Evergreen Lane, Green Valley, CA 93940, United States</p>
+                <p><i class="fas fa-phone-alt"></i> +1 (888) 447-9356 (GREEN)</p>
+                <p><i class="fas fa-envelope"></i> hello@xylogreengarden.com</p>
+                <p><i class="fab fa-instagram"></i> @xylogreengarden</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Xylo Green Garden — rooted in nature. All content, images, and green wisdom protected. Growing together since 2012.</p>
+            <p>📍 Address: 1420 Evergreen Lane, Green Valley, CA 93940 | 📞 +1 (888) 447-9356</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
